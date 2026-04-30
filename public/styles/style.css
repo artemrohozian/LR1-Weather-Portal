@@ -1,0 +1,239 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  background: #e8f0fe; 
+  background-image: linear-gradient(135deg, #e0e7ff 0%, #b8d0f0 100%);
+  line-height: 1.5;
+}
+
+a {
+  color: #003366;
+  text-decoration: underline;
+}
+a:hover {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+header {
+  background: #1a3a5c;
+  color: #fff;
+  padding: 15px 0;
+  border-bottom: 3px solid #ffcc00;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #ffcc00;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+nav li {
+  position: relative;
+}
+nav a {
+  display: block;
+  padding: 8px 15px;
+  background: #1a3a5c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+}
+nav a:hover {
+  background: #ffcc00;
+  color: #1a3a5c;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+nav ul ul li {
+  width: 100%;
+}
+nav ul ul a {
+  background: #fff;
+  color: #1a3a5c;
+  border-radius: 0;
+  padding: 8px 15px;
+  font-weight: normal;
+  border-bottom: 1px solid #eee;
+}
+nav ul ul a:hover {
+  background: #ffcc00;
+  color: #1a3a5c;
+}
+nav li:hover > ul {
+  display: flex;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.content {
+  flex: 3;
+  min-width: 300px;
+}
+.sidebar {
+  flex: 1;
+  min-width: 220px;
+}
+
+.card, section, article, aside {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+}
+
+
+h1 { font-size: 1.8rem; color: #1a3a5c; }
+h2 { font-size: 1.5rem; color: #003366; }
+h3, h4, h5, h6 { color: #1a3a5c; }
+
+.btn {
+  display: inline-block;
+  background: #1a3a5c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #ffcc00;
+  color: #1a3a5c;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.search-box input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background: #1a3a5c;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background: #f2f7ff;
+}
+
+iframe {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-family: inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: 2px solid #ffcc00;
+  border-color: #ffcc00;
+}
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: #cc0000;
+}
+.contact-form input:valid:not(:placeholder-shown) {
+  border-color: #339933;
+}
+
+footer {
+  background: #1a3a5c;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  border-top: 3px solid #ffcc00;
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+      flex-direction: column;
+      text-align: center;
+  }
+  nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  main {
+      flex-direction: column;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інформація про проєкт WeatherPortal">
+    <meta name="keywords" content="про сайт, інформація, погода, HTML, CSS">
+    <meta name="author" content="Рогозян Артем ПЗПІ-25-4">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WeatherPortal – Про сайт</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/png" href="../logo.png">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">🌤️ Weather<span>Portal</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li>
+                    <a href="#">Прогноз ▾</a>
+                    <ul>
+                        <li><a href="index.html#current">Поточна</a></li>
+                        <li><a href="index.html#forecast">5 днів</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Про сайт</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main style="flex-direction: column;">
+    <article class="card">
+        <h1>Про проєкт</h1>
+        <p><b>WeatherPortal</b> — навчальний вебсайт, створений у рамках лабораторної роботи з дисципліни «ГІПЕРТЕКСТ ТА ГІПЕРМЕДІА».</p>
+        <p><i>Мета:</i> продемонструвати використання основних тегів HTML5, семантичної розмітки, CSS-стилів та інтерактивних елементів.</p>
+
+        <h2>Використані технології</h2>
+        <ul>
+            <li>HTML5: семантичні теги (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>)</li>
+            <li>CSS3: градієнти, тіні, прозорість, псевдокласи, медіазапити</li>
+            <li>JavaScript: динамічне завантаження погоди з API</li>
+        </ul>
+
+        <h2>Додаткові можливості</h2>
+        <ol>
+            <li>Прогноз поточного дня</li>
+            <li>Погода на 5 днів (таблиця)</li>
+            <li>Інтерактивна карта опадів</li>
+        </ol>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <img src="../logo.png" alt="Логотип погодного порталу" width="200" style="border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        </p>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 WeatherPortal | Рогозян Артем ПЗПІ-25-4</p>
+</footer>
+
+</body>
+</html>

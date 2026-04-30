@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контактна інформація WeatherPortal, форма зворотного зв'язку">
+    <meta name="keywords" content="контакти, зворотній зв'язок, форма, погода">
+    <meta name="author" content="Рогозян Артем ПЗПІ-25-4">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <title>WeatherPortal – Контакти</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">🌤️ Weather<span>Portal</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li>
+                    <a href="#">Прогноз ▾</a>
+                    <ul>
+                        <li><a href="index.html#current">Поточна</a></li>
+                        <li><a href="index.html#forecast">5 днів</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Про сайт</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="content">
+        <section class="card">
+            <h1>Напишіть нам</h1>
+            <form class="contact-form" action="#" method="post" novalidate id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ім'я та прізвище *</label>
+                    <input type="text" id="name" name="name" placeholder="Іван Петренко" required minlength="3" maxlength="80" pattern="[А-Яа-яЄєІіЇїA-Za-z\s'\-]+" title="Лише літери, мінімум 3 символи">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required maxlength="150" title="Введіть коректну email-адресу">
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Телефон *</label>
+                    <input type="tel" id="tel" name="tel" placeholder="+380501234567" required pattern="\+380[0-9]{9}" maxlength="13" title="Формат: +380XXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Ваш сайт (URL)</label>
+                    <input type="url" id="website" name="website" placeholder="https://yoursite.com" pattern="https?://.+" maxlength="200" title="Посилання має починатись з http(s)://">
+                </div>
+
+                <div class="form-group">
+                    <label for="datetime">Дата та час звернення *</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Тема</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">— Оберіть тему —</option>
+                        <option value="bug">Знайшов помилку</option>
+                        <option value="feature">Пропозиція функціоналу</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Опишіть ваше питання..." required minlength="10" maxlength="1000"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree" style="display: inline; font-weight: normal;">Погоджуюсь з умовами *</label>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <button type="submit" class="btn">Надіслати</button>
+                    <button type="reset" class="btn" style="background: #888;">Очистити</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <aside class="sidebar">
+        <div class="card">
+            <h3>Контакти</h3>
+            <p>📍 просп. Науки, 14, Харків</p>
+            <p>📧 info@weatherportal.ua</p>
+            <p>📞 +38 (044) 123-45-67</p>
+            <p>🕐 Пн–Пт: 09:00–18:00</p>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <p>© 2026 WeatherPortal | Рогозян Артем ПЗПІ-25-4</p>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!this.checkValidity()) {
+            alert('Будь ласка, виправте помилки у формі (червоні рамки).');
+            return;
+        }
+        if (!document.getElementById('agree').checked) {
+            alert('Потрібно погодитися з умовами!');
+            return;
+        }
+        alert('Дякуємо! Повідомлення надіслано.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
