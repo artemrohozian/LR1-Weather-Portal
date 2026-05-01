@@ -46,7 +46,7 @@ async function loadCity(city) {
     } catch (err) {
         console.error(err);
         showError('Місто не знайдено або сервер недоступний.');
-        setText('cityName', 'Помилка 😢');
+        setText('cityName', 'Помилка');
         setText('currentTemp', '--°');
         setText('weatherDesc', 'Дані недоступні');
     }

@@ -17,7 +17,7 @@
 
 <header>
     <div class="header-inner">
-        <div class="logo">🌤️ Weather<span>Portal</span></div>
+        <div class="logo"><img   src="../logo.png"> Weather<span>Portal</span></div>
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
@@ -43,6 +43,7 @@
             <div class="search-box">
                 <input type="text" id="cityInput" placeholder="Введіть місто...">
                 <button class="btn" onclick="searchWeather()">Шукати</button>
+                <button class="btn" onclick="getLocation()">Авто локація</button>
             </div>
             <p id="errorMsg" style="color: red;"></p>
         </section>
